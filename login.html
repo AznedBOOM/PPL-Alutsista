@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      /* Ganti 'nama-gambar.jpg' dengan nama gambar yang ingin Anda gunakan dari folder src */
+      background-image: url('/assets/img/Rectangle\ 2.png');
+      background-size: cover;
+      background-position: top 20%;
+      background-color: rgba(0, 0, 0, 0,5);
+      background-repeat: no-repeat;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="flex items-center justify-between px-[40px] py-[20px]">
+    <img src="/assets/img/1.png" alt="Logo 1" class="w-[106px] h-[100px]">
+    <img src="/assets/img/2.png" alt="Logo 2" class="w-[106px] h-[100px]">
+  </div>
+  
+  <h2 class="text-center mb-4 text-[32px] font-[600px] text-white ">SISTEM INFORMASI ALUTSISTA</h2>
+  <div class="w-[506px] h-[320px] border rounded-[20px] px-[85px] mx-auto pt-[40px] pb-[52px] bg-white">
+    <div class="login-container">
+      <div class="description">
+        <p class="text-[20px] font-[600px] mb-[42px] text-center"><b>Login dengan akun ARMY!</b></p>
+      </div>
+      <form class="login-form space-y-[18px] w-full">
+        <div class="form-group">
+          <!-- <label for="username">Username:</label> -->
+          <input class="rounded-[15px] bg-[#D4F4FE] text-black px-[20px] py-[9px] w-full border-b-[4px] border-[#3894FF]" placeholder="email..." type="text" class="form-control" id="username" name="username" required>
+        </div>
+
+        <div class="form-group">
+          <!-- <label for="password">Password:</label> -->
+          <input class="rounded-[15px] bg-[#D4F4FE] text-black px-[20px] py-[9px] w-full border-b-[4px] border-[#3894FF]" placeholder="password..." type="password" class="form-control" required>
+        </div>
+
+        <button type="submit" class="bg-[#3894FF] px-[141px] py-[8px] text-white font-[600px] rounded-[15px]">Masuk</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
