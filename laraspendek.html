@@ -3,96 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>Data Alutsista</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
 </head>
 
 <style>
-    body {
-        font-family: "Lato", sans-serif;
-        background-image: url('./assets/img/Rectangle 2.png');
-        background-size: cover;
-        background-position: top 20%;
-        background-color: rgba(0, 0, 0, 0,5);
-        background-repeat: no-repeat;
-    }
-
-    .blur-container {
+    .sidenav {
+        height: 100%;
+        width: 0;
         position: fixed;
+        z-index: 1;
         top: 0;
         left: 0;
-        width: 100%;
-        height: 100%;
-        backdrop-filter: blur(5px); /* Adjust the blur strength as needed */
-        z-index: -1;
+        background-color: #d5d4d4;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Menengahkan secara horizontal */
+        justify-content: center; /* Menengahkan secara vertikal */ 
     }
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #d5d4d4;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Menengahkan secara horizontal */
-    justify-content: center; /* Menengahkan secara vertikal */ 
-}
-
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    display: block;
-    transition: 0.3s;
-    text-align: center; /* Menengahkan teks */
-}
-
-.sidenav a:hover {
-  color: #ada6a6;
-}
-
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-.sidebar-link {
-    font-size: 20px; /* Sesuaikan ukuran font yang diinginkan */
-    color: #ff0000; /* Sesuaikan warna font yang diinginkan */
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    margin-left: 20px;
-}
-
-.sidebar-link:hover {
-    color: #cc0000; /* Warna saat hover, sesuaikan jika perlu */
-}
-
-#main {
-  transition: margin-left .5s;
-  padding: 16px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
+    
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        display: block;
+        transition: 0.3s;
+        text-align: center; /* Menengahkan teks */
+    }
+    
+    .sidenav a:hover {
+      color: #ada6a6;
+    }
+    
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+    
+    .sidebar-link {
+        font-size: 20px; /* Sesuaikan ukuran font yang diinginkan */
+        color: #ff0000; /* Sesuaikan warna font yang diinginkan */
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        margin-left: 20px;
+    }
+    
+    .sidebar-link:hover {
+        color: #cc0000; /* Warna saat hover, sesuaikan jika perlu */
+    }
+    
+    #main {
+      transition: margin-left .5s;
+      padding: 16px;
+    }
+    
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    } 
 </style>
 
 <body>
     <div class="flex gap-8 w-full" id="main">
         <!-- Sidebar -->
-        <span style="font-size:30px;cursor:pointer; color: white;" onclick="toggleNav()">&#9776;</span>
+        <span style="font-size:30px;cursor:pointer; color: rgb(92, 92, 92);" onclick="toggleNav()">&#9776;</span>
 
         <div id="mySidenav" class="sidenav flex-1">
             <div class="px-[24px] py-[40px]  text-[16px] font-[400px] h-screen w-[300px]">
@@ -142,37 +124,29 @@
                 </div>
             </div>
         </div>
-        
-        
+
         <div class="w-screen">
-            <div class="blur-container"></div>
             <!-- Navbar -->
             <div class="font-bold flex gap-2 items-center justify-end mt-[40px] mb-[25px] px-[40px] py-[20px] border-b-2 ">
-                <img src="assets/img/gg_profile 1.png" alt="">
-                <h1 class="text-[20px] text-white">Selamat Datang, Alif!</h1>
+                <img src="assets/img/gg_profile.png" alt="">
+                <h1 class="text-[20px]">Selamat Datang, Alif!</h1>
             </div>
             <!-- Menu Utama -->
-            <h1 class="font-bold underline text-[24px] text-white">Data Alutsista</h1>
-            <div class="mt-[70px] flex gap-[170px] w-full items-center justify-center">
+            <h1 class="font-bold underline text-[24px]">Data Senjata Laras Pendek</h1>
+            <div class="mt-[70px] flex gap-[30px] w-full items-center justify-center">
                 <div class="border-r-">
-                    <a href="dashboard2.html">
-                    <img class="mb-[20px]" src="assets/img/logoTniAd.png" alt="">
+                    <a href="detail-senjata.html">
+                    <img class="mb-[20px]" src="assets/img/Group39.png" alt="">
                 </a>
-                    <h1 class="font-bold text-white">Angkatan Darat</h1>
                 </div>
                 <div>
-                    <img class="mb-[20px]" src="assets/img/Line 2.png" alt="">
+                    <img class="mb-[20px]" src="assets/img/Group 40.png" alt="">
                 </div>
                 <div>
-                    <img class="mb-[20px]" src="assets/img/LogoTniAL.png" alt="">
-                    <h1 class="font-bold text-white">Angkatan Laut</h1>
+                    <img class="mb-[20px]" src="assets/img/Group 41.png" alt="">
                 </div>
                 <div>
-                    <img class="mb-[20px]" src="assets/img/Line 2.png" alt="">
-                </div>
-                <div>
-                    <img class="mb-[20px]" src="assets/img/LogoTniAu.png" alt="">
-                    <h1 class="font-bold text-white">Angkatan Udara</h1>
+                    <img class="mb-[20px]" src="assets/img/Group 42.png" alt="">
                 </div>
             </div>
         </div>
@@ -202,6 +176,5 @@
             }
         }
     </script>
-
 </body>
 </html>
